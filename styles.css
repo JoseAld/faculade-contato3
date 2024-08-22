@@ -1,0 +1,240 @@
+
+
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 101%;
+    height: 90%vh;
+}
+
+#background video {
+    width: 99%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+    height: inherit;
+    width: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: #f3f3;
+    border-radius: 15px;
+    box-shadow: 1px 5px 60px 0px #100a;
+  }
+  
+  .card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: #f5f5;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  .card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+  }
+  
+  .card .job {
+    margin-top: 10px;
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 12px;
+  }
+  
+  .card .img {
+    width: 70px;
+    height: 80px;
+    background: #f5f5;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+  }
+  .gengar{
+    width: 70px;
+    height: 80px;
+    border-radius: 15px;
+    margin: auto;
+    
+  }
+
+
+  /* --------------------------------------*/ 
+.loader {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 35%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #ed66ff;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .loader::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #ed66ff;
+    z-index: 5;
+    border-bottom: 2px solid #ed66ff;
+    box-sizing: border-box;
+    animation: eyeShade 3s infinite;
+  }
+  
+  .loader::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    width: 25px;
+    z-index: 2;
+    height: 32px;
+    background: #111;
+    border-radius: 50%;
+    animation: eyeMove 3s infinite;
+  }
+  
+  @keyframes eyeShade {
+    0% {
+      transform: translateY(0)
+    }
+  
+    20% {
+      transform: translateY(5px)
+    }
+  
+    40% , 50% {
+      transform: translateY(-5px)
+    }
+  
+    60% {
+      transform: translateY( -8px)
+    }
+  
+    75% {
+      transform: translateY( 5px)
+    }
+  
+    100% {
+      transform: translateY(10px)
+    }
+  }
+  
+  @keyframes eyeMove {
+    0% {
+      transform: translate(0 , 0)
+    }
+  
+    20% {
+      transform: translate(0px , 5px)
+    }
+  
+    40% , 50% {
+      transform: translate(0px , -5px)
+    }
+  
+    60% {
+      transform: translate(-10px , -5px)
+    }
+  
+    75% {
+      transform: translate(-20px , 5px)
+    }
+  
+    100% {
+      transform: translate(0 , 10px)
+    }
+  }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    position: relative;
+    
+}
+
+.button {
+    --bg: #000;
+    --hover-bg: #ff90e8;
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    margin-top: 50px;
+    margin-left: 16px;
+  }
+  
+  .button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  .child {
+    width: 200px;
+    height: 50px;
+
+    /* Centralizar na vertical e na horizontal */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -145px 0 0 -115px; /* aplique margens superior e esquerda negativas para centralizar de verdade o elemento */
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+  @media screen  and (max-width: 768px){
+    .child {
+        width: 200px;
+        height: 50px;
+    
+        /* Centralizar na vertical e na horizontal */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -195px 300px 0 -90px; /* aplique margens superior e esquerda negativas para centralizar de verdade o elemento */
+      }
+    
+    
+  }
